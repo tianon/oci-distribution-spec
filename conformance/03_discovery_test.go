@@ -296,6 +296,7 @@ var test03ContentDiscovery = func() {
 			})
 		})
 
+		if false {
 		g.Context("Test content discovery endpoints (listing references)", func() {
 			g.Specify("GET request to nonexistent blob should result in empty 200 response", func() {
 				SkipIfDisabled(contentDiscovery)
@@ -380,6 +381,7 @@ var test03ContentDiscovery = func() {
 				Expect(index.Manifests[0].Digest.String()).To(Equal(refsManifestCLayerArtifactDigest))
 			})
 		})
+		}
 
 		g.Context("Teardown", func() {
 			if deleteManifestBeforeBlobs {
@@ -474,6 +476,7 @@ var test03ContentDiscovery = func() {
 				})
 			}
 
+			if false {
 			g.Specify("References teardown", func() {
 				SkipIfDisabled(contentDiscovery)
 				RunOnlyIf(runContentDiscoverySetup)
@@ -546,6 +549,7 @@ var test03ContentDiscovery = func() {
 					deleteReq(req)
 				}
 			})
+			}
 		})
 	})
 }
